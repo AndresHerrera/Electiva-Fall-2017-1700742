@@ -15,3 +15,5 @@ mpicc mpiEx2a.c -o mpiEx2a
 - Ejecutar
 
 mpirun --hostfile machinefile -np 2 ./mpiEx2a
+mpirun --hostfile machinefile -np 4 ./mpiEx2a
+mpirun --hostfile machinefile -np 8 ./mpiEx2a
