@@ -8,12 +8,12 @@ Guarde este codigo con el nombre mpiEx2a.c.
 
 Ejecute este programa con 2, 4 y 8; procesos.
 
-- Compilar
+* Compilar
 
-* mpicc mpiEx2a.c -o mpiEx2a
+	* mpicc mpiEx2a.c -o mpiEx2a
 
-- Ejecutar
+* Ejecutar
 
-* mpirun --hostfile machinefile -np 2 ./mpiEx2a
-* mpirun --hostfile machinefile -np 4 ./mpiEx2a
-* mpirun --hostfile machinefile -np 8 ./mpiEx2a
+	* mpirun --hostfile machinefile -np 2 ./mpiEx2a
+	* mpirun --hostfile machinefile -np 4 ./mpiEx2a
+	* mpirun --hostfile machinefile -np 8 ./mpiEx2a
