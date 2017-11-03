@@ -17,3 +17,6 @@ Ejecute este programa con 2, 4 y 8; procesos.
 	* mpirun --hostfile machinefile -np 2 ./mpiEx2a
 	* mpirun --hostfile machinefile -np 4 ./mpiEx2a
 	* mpirun --hostfile machinefile -np 8 ./mpiEx2a
+Example 4
+mpicc mpiExample4.c -o mpiExample4
+mpirun --hostfile machinefile -np 5 ./mpiExample4
