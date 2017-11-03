@@ -2,10 +2,9 @@
 #include "mpi.h"
 
 int main(int argc,char *argv[]){
-	int i, sum, sumTotal, maxVal;
+	int i, maxVal;
 	int start, end, size, rank;
-	
-	//maxVal = 10000;
+	unsigned long sum, sumTotal;
 
 	MPI_Init(&argc,&argv);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -14,85 +13,69 @@ int main(int argc,char *argv[]){
 	// Defina aqui el segmento que debe procesar una tarea
 	// El inicio del segmento en la variable 'start', el fin del segmento
 	// la variable 'end'
-    	//sum = 0;
+    	sum = 0;
 	
 	 if(rank==0)
 	 {
-            	sum=0;
 		start=1;
 	        end=20000;
             	for(i=start; i<= end; i++)
 		{
-			 sum = sum +i;
+		 sum = sum +i;
             	}
-		sumTotal=sum;
 	 }
-	 
-	  if(rank==1)
-	 {
-            	sum=0;
+	else	  
+	if(rank==1)
+	{
 		start=20001;
 	        end=40000;
             	for(i=start; i<= end; i++)
 		{
-			 sum = sum +i;
+		  sum = sum +i;
             	}
-		sumTotal=sum;
 	 }
-	 
-	   if(rank==2)
-	 {
-            	sum=0;
+	 else 
+	if(rank==2)
+	{
 		start=40001;
 	        end=60000;
             	for(i=start; i<= end; i++)
 		{
-			 sum = sum +i;
+			sum = sum +i;
             	}
-		sumTotal = sum;
 	 }
-	 
-	 if(rank==3)
-	 {
-            	sum=0;
+	else	 
+	if(rank==3)
+	{
 		start=60001;
 	        end=80000;
             	for(i=start; i<= end; i++)
 		{
-			 sum = sum +i;
+		 sum = sum +i;
 				
             	}
-		sumTotal=sum;
 	 }
-	 
+	else	 
 	 if(rank==4)
-	 {
-            	sum=0;
+	{
 		start=80001;
 	        end=100000;
             	for(i=start; i<= end; i++)
 		{
-		    sum = sum +i;
-            	}
-            	sumTotal = sum;
+			sum= sum+i;
+           	}
 	 }
-
-
-         //sumTotal = sum;   
 	
-         printf("Proceso :  %d - SumaP:  %d - SumaT: %d - desde: %d- hasta %d\n", rank ,  sum ,  sumTotal, start, end );
+         printf("Proceso :  %d - Suma Parcial:  %lu  - desde: %d- hasta %d\n",rank ,  sum , start, end );
         
 
-	
-
-	//float global_sum;
-	MPI_Reduce(&sum, &sumTotal, 1, MPI_FLOAT, MPI_SUM , 0 , MPI_COMM_WORLD);
+	MPI_Reduce(&sum, &sumTotal, 1 , MPI_UNSIGNED_LONG, MPI_SUM , 0 , MPI_COMM_WORLD);
 	// Utilice la funcion 'MPI_Reduce' para guardar en la variable 
 	// 'sumTotal' la suma parcial de todos las tareas 
 
 	if(rank==0)
 	{
-		printf ("\nSuma Total: %d\n",sumTotal);
+		printf ("\nSuma Total: %lu\n",sumTotal);
 	}
 
 	MPI_Finalize();
