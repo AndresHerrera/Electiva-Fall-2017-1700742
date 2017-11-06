@@ -28,12 +28,15 @@ Ejecute este programa con 2, 4 y 8; procesos.
 - Proceso 4 - Calucla el valor desde 80001 a 100000
 
 
-* Example 4
+* Compilar
 	* mpicc mpiExample4.c -o mpiExample4
+* Ejecutar
 	* mpirun --hostfile machinefile -np 5 ./mpiExample4
 
 
+## 3) Este programa permite realizar el calculo de PI usando la aproximacion de montecarlo de forma distribuida.
 
-
-* Montecarlo
+* Compilar
+	* mpicc montecarlopi.c -o montecarlopi
+* Ejecutar	
 	* mpirun --hostfile machinefile -np 8 ./montecarlopi
