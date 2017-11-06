@@ -17,6 +17,23 @@ Ejecute este programa con 2, 4 y 8; procesos.
 	* mpirun --hostfile machinefile -np 2 ./mpiEx2a
 	* mpirun --hostfile machinefile -np 4 ./mpiEx2a
 	* mpirun --hostfile machinefile -np 8 ./mpiEx2a
-Example 4
-mpicc mpiExample4.c -o mpiExample4
-mpirun --hostfile machinefile -np 5 ./mpiExample4
+
+
+## 2) Este programa busca calcular la suma de los primeros 100000 numeros de forma distribuida.  Cada nodo realiza los siguientes calculos.
+
+- Proceso 1 - Calcula el valor desde 1 a 20000
+- Proceso 2 - Calcula el valor desde 20001 a 40000
+- Proceso 3 - Calcula el valor desde 40001 a 60000
+- Proceso 4 - Calcula el valor desde 60001 a 80000
+- Proceso 4 - Calucla el valor desde 80001 a 100000
+
+
+* Example 4
+	* mpicc mpiExample4.c -o mpiExample4
+	* mpirun --hostfile machinefile -np 5 ./mpiExample4
+
+
+
+
+* Montecarlo
+	* mpirun --hostfile machinefile -np 8 ./montecarlopi
