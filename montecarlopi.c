@@ -37,10 +37,22 @@ int main(int argc, char* argv[])
         if(circumscribed(1) > 0)
 	circles++;
         rect++; 
-    }
+   }
 
-    float PI = 4.0* circles / rect;
-    printf("PI is %2.4f: \n", PI);
+    
+    float sumrect;
+    float sumcircles; 
+	
+    MPI_Reduce(&rect, &sumrect , 1 , MPI_UNSIGNED_LONG, MPI_SUM , 0 , MPI_COMM_WORLD );  
+   
+    MPI_Reduce(&circles, &sumcircles, 1 ,MPI_UNSIGNED_LONG, MPI_SUM , 0 , MPI_COMM_WORLD );
+
+
+    if(rank==0)
+    {	
+       float PI = 4.0 * sumcircles / sumrect; 
+       printf("El calculo de PI es :  %f \n", PI);
+    }
     
     MPI_Finalize();
    
