@@ -1,5 +1,11 @@
 # Electiva-Fall-2017-1700742
 
+## Alumnos
+- Fabio Andres Herrera - [fabio.herrera@correounivalle.edu.co] fabio.herrera@correounivalle.edu.co
+- Mario German Castillo - [mario.castillo@correounivalle.edu.co] mario.castillo@correounivalle.edu.co 
+
+
+
 ## 1) Este programa imprime un mensaje diciendo:
 
 En el maestro Yo soy el maestro y existen N procesos corriendo
@@ -51,7 +57,7 @@ Cada nodo realiza los siguientes calculos:
 
 ## 4) Programa version de MPI_Bcast usando las primitivas MPI_Send y MPI_Recv. 
 
-Usa funcion  myBcast que recibe los mismos parámetros de la función MPI_Bcast y al interior contiene. 
+Usa funcion  **myBcast** que recibe los mismos parámetros de la función MPI_Bcast y al interior contiene. 
 
 - Si es el nodo raiz, a través de un ciclo, va por todos los procesos en el comunicador y les envía los datos requeridos 
 - Si no es el nodo raíz, el proceso se queda esperando a recibir los datos.
