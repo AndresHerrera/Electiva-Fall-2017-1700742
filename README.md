@@ -53,12 +53,12 @@ Cada nodo realiza los siguientes calculos.
 
 Usa funcion  myBcast que recibe los mismos parámetros de la función MPI_Bcast y al interior contiene. 
 
-* Si es el nodo raiz, a través de un ciclo, va por todos los procesos en el comunicador y les envía los datos requeridos 
-* Si no es el nodo raíz, el proceso se queda esperando a recibir los datos.
+- Si es el nodo raiz, a través de un ciclo, va por todos los procesos en el comunicador y les envía los datos requeridos 
+- Si no es el nodo raíz, el proceso se queda esperando a recibir los datos.
 
 
 * Compilar
-        * mpicc myBcast -o myBcast
+	* mpicc myBcast -o myBcast
 * Ejecutar
-        * mpirun --hostfile machinefile -np 8 ./myBcast
+	* mpirun --hostfile machinefile -np 8 ./myBcast
 
