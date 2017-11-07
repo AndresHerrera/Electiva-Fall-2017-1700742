@@ -51,9 +51,9 @@ Cada nodo realiza los siguientes calculos:
 
 ## Respuestas:
 * **Por que piensa que es importante MPI en un problema como el del calculo de pi usando la aproximacion Montecarlo?**
-	* Es importante el uso de MPI en un problema como el calculo de PI usando Montecarlo, ya que es requido un gran numero de calculos y dividir las tareas en las unidades de procesamiento que a disposicion es muy util.    
+	* Es importante el uso de MPI en un problema como el calculo de PI usando Montecarlo, ya que es requerido un gran numero de calculos. Así que dividir las tareas y enviarlas a las unidades de procesamiento que se tengan a disposicion es muy util.    
 * **Para que tipo de problemas entonces es apropiado MPI?**
-	* En problemas donde determinados procesos pueden ser realizados de forma paralela, el uso de MPI es apropiado.
+	* En problemas donde determinados procesos complejos que requieran gran capacidad de computo y estos puedan ser realizados de forma paralela, el uso de MPI es apropiado.
 
 ## 4) Programa version de MPI_Bcast usando las primitivas MPI_Send y MPI_Recv. 
 
