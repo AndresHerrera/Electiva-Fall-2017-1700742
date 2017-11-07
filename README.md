@@ -1,8 +1,8 @@
 # Electiva-Fall-2017-1700742
 
 ## Alumnos
-- Fabio Andres Herrera - [fabio.herrera@correounivalle.edu.co] fabio.herrera@correounivalle.edu.co
-- Mario German Castillo - [mario.castillo@correounivalle.edu.co] mario.castillo@correounivalle.edu.co 
+- Fabio Andres Herrera - [fabio.herrera@correounivalle.edu.co](fabio.herrera@correounivalle.edu.co)
+- Mario German Castillo - [mario.castillo@correounivalle.edu.co](mario.castillo@correounivalle.edu.co) 
 
 
 
