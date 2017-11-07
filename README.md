@@ -71,9 +71,9 @@ Usa la funcion  **myBcast** que recibe los mismos parámetros de la función MPI
 ## 5) Programa Axb2.c que realiza la multiplicacion matrix x vector de forma distribuida usando las funciones **distributereceive** y **receive** implementadas.
 
 * Compilar
-        * mpicc Axb2.c -o Axb2
+	* mpicc Axb2.c -o Axb2
 * Ejecutar
-        * mpirun --hostfile machinefile -np 8 ./Axb2
+	* mpirun --hostfile machinefile -np 8 ./Axb2
 
  
 
