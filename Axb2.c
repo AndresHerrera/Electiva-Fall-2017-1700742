@@ -192,7 +192,8 @@ int receive(int rank) {
 	MPI_Recv(iVec,MAXCOL,MPI_INT,0,TAGVECTOR,MPI_COMM_WORLD, &status);
 		   
 	do{  
-	      	MPI_Recv(iRow,MAXCOL,MPI_INT,0,MPI_ANY_TAG,MPI_COMM_WORLD, &status);           if(status.MPI_TAG==TAGTAREA)
+	      	MPI_Recv(iRow,MAXCOL,MPI_INT,0,MPI_ANY_TAG,MPI_COMM_WORLD, &status);           
+		if(status.MPI_TAG==TAGTAREA)
 		{
 			int sum=0;
 			for (int k = 0; k < MAXCOL; k++) 
