@@ -6,7 +6,7 @@
 
 
 
-## 1) Este programa imprime un mensaje diciendo:
+## 1) Este programa [mpiEx2a] imprime un mensaje diciendo:
 
 En el maestro Yo soy el maestro y existen N procesos corriendo
 En los otros procesos Yo soy un proceso con identificador M de N procesos en ejecucion. Donde, N es el total de procesos en ejecucion y M es el identificador del proceso.
@@ -25,7 +25,7 @@ Ejecute este programa con 2, 4 y 8; procesos.
 	* mpirun --hostfile machinefile -np 8 ./mpiEx2a
 
 
-## 2) Este programa calcula la suma de los primeros 100000 numeros de forma distribuida.  
+## 2) Este programa [mpiExample4] calcula la suma de los primeros 100000 numeros de forma distribuida.  
 
 Cada nodo realiza los siguientes calculos:
 
@@ -42,7 +42,7 @@ Cada nodo realiza los siguientes calculos:
 	* mpirun --hostfile machinefile -np 5 ./mpiExample4
 
 
-## 3) Este programa permite realizar el calculo de PI usando la aproximacion de montecarlo de forma distribuida.
+## 3) Este programa [montecarlopi] permite realizar el calculo de PI usando la aproximacion de montecarlo de forma distribuida.
 
 * Compilar
 	* mpicc montecarlopi.c -o montecarlopi
@@ -55,7 +55,7 @@ Cada nodo realiza los siguientes calculos:
 * **Para que tipo de problemas entonces es apropiado MPI?**
 	* En problemas donde determinados procesos complejos que requieran gran capacidad de computo y estos puedan ser realizados de forma paralela, el uso de MPI es apropiado.
 
-## 4) Programa version de MPI_Bcast usando las primitivas MPI_Send y MPI_Recv. 
+## 4) Este programa [myBcast]  usa las primitivas MPI_Send y MPI_Recv. 
 
 Usa la funcion  **myBcast** que recibe los mismos parámetros de la función MPI_Bcast y al interior contiene las siguientes instrucciones:
 
@@ -68,7 +68,7 @@ Usa la funcion  **myBcast** que recibe los mismos parámetros de la función MPI
 * Ejecutar
 	* mpirun --hostfile machinefile -np 8 ./myBcast
 
-## 5) Programa Axb2.c que realiza la multiplicacion matrix x vector de forma distribuida usando las funciones **distributereceive** y **receive** implementadas.
+## 5) El programa [Axb2] realiza la multiplicacion matrix x vector de forma distribuida usando las funciones **distributereceive** y **receive** implementadas.
 
 * Compilar
 	* mpicc Axb2.c -o Axb2
