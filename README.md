@@ -57,7 +57,7 @@ Cada nodo realiza los siguientes calculos:
 
 ## 4) Programa version de MPI_Bcast usando las primitivas MPI_Send y MPI_Recv. 
 
-Usa funcion  **myBcast** que recibe los mismos parámetros de la función MPI_Bcast y al interior contiene. 
+Usa la funcion  **myBcast** que recibe los mismos parámetros de la función MPI_Bcast y al interior contiene las siguientes instrucciones:
 
 - Si es el nodo raiz, a través de un ciclo, va por todos los procesos en el comunicador y les envía los datos requeridos 
 - Si no es el nodo raíz, el proceso se queda esperando a recibir los datos.
@@ -67,4 +67,13 @@ Usa funcion  **myBcast** que recibe los mismos parámetros de la función MPI_Bc
 	* mpicc myBcast -o myBcast
 * Ejecutar
 	* mpirun --hostfile machinefile -np 8 ./myBcast
+
+## 5) Programa Axb2.c que realiza la multiplicacion matrix x vector de forma distribuida usando las funciones **distributereceive** y **receive** implementadas.
+
+* Compilar
+        * mpicc Axb2.c -o Axb2
+* Ejecutar
+        * mpirun --hostfile machinefile -np 8 ./Axb2
+
+ 
 
