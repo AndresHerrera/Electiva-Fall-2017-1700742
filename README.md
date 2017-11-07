@@ -21,7 +21,7 @@ Ejecute este programa con 2, 4 y 8; procesos.
 
 ## 2) Este programa calcula la suma de los primeros 100000 numeros de forma distribuida.  
 
-Cada nodo realiza los siguientes calculos.
+Cada nodo realiza los siguientes calculos:
 
 - Proceso 1 - Calcula el valor desde 1 a 20000
 - Proceso 2 - Calcula el valor desde 20001 a 40000
@@ -44,9 +44,9 @@ Cada nodo realiza los siguientes calculos.
 	* mpirun --hostfile machinefile -np 8 ./montecarlopi
 
 ## Respuestas:
-* Por que piensa que es importante MPI en un problema como el del calculo de pi usando la aproximacion Montecarlo?
+* **Por que piensa que es importante MPI en un problema como el del calculo de pi usando la aproximacion Montecarlo?**
 	* Es importante el uso de MPI en un problema como el calculo de PI usando Montecarlo, ya que es requido un gran numero de calculos y dividir las tareas en las unidades de procesamiento que a disposicion es muy util.    
-* Para que tipo de problemas entonces es apropiado MPI?
+* **Para que tipo de problemas entonces es apropiado MPI?**
 	* En problemas donde determinados procesos pueden ser realizados de forma paralela, el uso de MPI es apropiado.
 
 ## 4) Programa version de MPI_Bcast usando las primitivas MPI_Send y MPI_Recv. 
